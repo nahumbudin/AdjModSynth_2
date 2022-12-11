@@ -1,0 +1,359 @@
+<?xml version="1.0"?>
+<VisualGDBProjectSettings2 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Project xsi:type="com.visualgdb.project.linux">
+    <CustomSourceDirectories>
+      <Directories />
+      <PathStyle>MinGWUnixSlash</PathStyle>
+      <LocalDirForAbsolutePaths>$(ToolchainDir)</LocalDirForAbsolutePaths>
+    </CustomSourceDirectories>
+    <AutoProgramSPIFFSPartition>true</AutoProgramSPIFFSPartition>
+    <DeploymentHost>
+      <HostName>192.168.3.6</HostName>
+      <Transport>SSH</Transport>
+      <UserName>pi</UserName>
+    </DeploymentHost>
+    <MainSourceTransferCommand>
+      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
+      <LocalDirectory>$(ProjectDir)</LocalDirectory>
+      <RemoteDirectory>/tmp/VisualGDB/$(ProjectDirUnixStyle)</RemoteDirectory>
+      <FileMasks>
+        <string>*.cpp</string>
+        <string>*.h</string>
+        <string>*.hpp</string>
+        <string>*.c</string>
+        <string>*.cc</string>
+        <string>*.cxx</string>
+        <string>*.mak</string>
+        <string>Makefile</string>
+        <string>*.txt</string>
+        <string>*.cmake</string>
+      </FileMasks>
+      <TransferNewFilesOnly>true</TransferNewFilesOnly>
+      <IncludeSubdirectories>true</IncludeSubdirectories>
+      <SelectedDirectories />
+      <DeleteDisappearedFiles>false</DeleteDisappearedFiles>
+      <ApplyGlobalExclusionList>true</ApplyGlobalExclusionList>
+    </MainSourceTransferCommand>
+    <AllowChangingHostForMainCommands>false</AllowChangingHostForMainCommands>
+    <SkipBuildIfNoSourceFilesChanged>false</SkipBuildIfNoSourceFilesChanged>
+    <IgnoreFileTransferErrors>false</IgnoreFileTransferErrors>
+    <RemoveRemoteDirectoryOnClean>false</RemoveRemoteDirectoryOnClean>
+    <SkipDeploymentTests>false</SkipDeploymentTests>
+    <MainSourceDirectoryForLocalBuilds>$(ProjectDir)</MainSourceDirectoryForLocalBuilds>
+  </Project>
+  <Build xsi:type="com.visualgdb.build.cmake">
+    <BuildLogMode xsi:nil="true" />
+    <ToolchainID>
+      <ID>com.visualgdb.raspberry_pi</ID>
+      <Version>
+        <GCC>8.3.0</GCC>
+        <GDB>8.2.1</GDB>
+        <Revision>3</Revision>
+      </Version>
+    </ToolchainID>
+    <RelativeSourceDirectory />
+    <ConfigurationType>DEBUG</ConfigurationType>
+    <BinaryDirectory>build/$(PlatformName)/$(ConfigurationName)</BinaryDirectory>
+    <MakeCommandTemplate>
+      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
+      <RemoteHost>
+        <HostName>BuildMachine</HostName>
+        <Transport>BuiltinShortcut</Transport>
+      </RemoteHost>
+      <Command>$(VISUALGDB_DIR)/ninja.exe</Command>
+      <Arguments />
+      <WorkingDirectory>$(BuildDir)</WorkingDirectory>
+      <BackgroundMode xsi:nil="true" />
+    </MakeCommandTemplate>
+    <CMakeCommand>
+      <SkipWhenRunningCommandList>false</SkipWhenRunningCommandList>
+      <RemoteHost>
+        <HostName>BuildMachine</HostName>
+        <Transport>BuiltinShortcut</Transport>
+      </RemoteHost>
+      <Command>$(ToolchainCMake)</Command>
+      <BackgroundMode xsi:nil="true" />
+    </CMakeCommand>
+    <UpdateSourcesInCMakeFile>true</UpdateSourcesInCMakeFile>
+    <ExportCompileCommands>false</ExportCompileCommands>
+    <DisableToolchainFile>false</DisableToolchainFile>
+    <ExtraModuleDirectories>
+      <string>E:/Nahum/Workspace/RaspberryPi3/Projects/VS/AdjModSynth_2/AdjModSynth_2/images</string>
+    </ExtraModuleDirectories>
+    <ExtraConfigurationVariables>
+      <string>CMAKE_AUTORCC=true</string>
+    </ExtraConfigurationVariables>
+    <CMakeMakefileType>Ninja</CMakeMakefileType>
+    <DeployAsRoot>false</DeployAsRoot>
+    <CMakeCleanMode>RemoveBuildDirectory</CMakeCleanMode>
+    <UseCCache>false</UseCCache>
+    <ProjectModeSettings>
+      <ProjectItemSettings>
+        <GroupSourcesByTypes>true</GroupSourcesByTypes>
+        <GroupSourcesByPaths>true</GroupSourcesByPaths>
+        <GroupTargetsByPaths>true</GroupTargetsByPaths>
+        <FollowCMakeSourceGroups>false</FollowCMakeSourceGroups>
+        <AutoRefreshProject>true</AutoRefreshProject>
+        <AlwaysConsiderOutdated>false</AlwaysConsiderOutdated>
+        <SortTargetsByName>true</SortTargetsByName>
+        <RedundantTargetMode>HideOuterProjectTargets</RedundantTargetMode>
+        <SortSourcesByName>true</SortSourcesByName>
+        <BuildAllTargetsInSubdir>false</BuildAllTargetsInSubdir>
+        <FoldSingleItemPathLevels>true</FoldSingleItemPathLevels>
+      </ProjectItemSettings>
+      <TargetSpecificSettings>
+        <CMakeTargetSpecificSettings>
+          <TargetID>AdjModSynth_2</TargetID>
+          <Debug />
+          <Deployment>
+            <Mode>Auto</Mode>
+            <DeployIfNotSpecificallyReferenced>false</DeployIfNotSpecificallyReferenced>
+            <DoNotDeployVersionedBinaries>false</DoNotDeployVersionedBinaries>
+          </Deployment>
+          <RootVirtualSourceFolder>
+            <Subfolders>
+              <VirtualSourceFolder>
+                <Name>Tabs</Name>
+                <Subfolders />
+                <Files>
+                  <string>EffectsTab.cpp</string>
+                  <string>FiltAmpKbdTab.cpp</string>
+                  <string>FluidSynthTab.cpp</string>
+                  <string>KpsPadTab.cpp</string>
+                  <string>MainTab.cpp</string>
+                  <string>MidiMixerTab.cpp</string>
+                  <string>ModulatorsTab.cpp</string>
+                  <string>NoiseMsoTab.cpp</string>
+                  <string>OscilatorsTab.cpp</string>
+                  <string>WebTab.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Tabs</Name>
+                <Subfolders />
+                <Files>
+                  <string>EffectsTab.h</string>
+                  <string>FiltAmpKbdTab.h</string>
+                  <string>FluidSynthTab.h</string>
+                  <string>MainTab.h</string>
+                  <string>MidiMixerTab.h</string>
+                  <string>ModulatorsTab.h</string>
+                  <string>NoiseMsoTab.h</string>
+                  <string>OscilatorsTab.h</string>
+                  <string>WebTab.h</string>
+                  <string>KpsPadTab.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>MainMenu</Name>
+                <Subfolders />
+                <Files>
+                  <string>MainMenu.cpp</string>
+                  <string>MainMenu_Audio.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Dialogs</Name>
+                <Subfolders />
+                <Files>
+                  <string>Dialog_FluidSynthSelectProgram.cpp</string>
+                  <string>Dialog_KbdControlMap.cpp</string>
+                  <string>Dialog_AudioSettings.cpp</string>
+                  <string>Dialog_MidiClients.cpp</string>
+                  <string>Dialog_JackClients.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Dialogs</Name>
+                <Subfolders />
+                <Files>
+                  <string>Dialog_FluidSynthSelectProgram.h</string>
+                  <string>Dialog_KbdControlMap.h</string>
+                  <string>Dialog_AudioSettings.h</string>
+                  <string>Dialog_MidiClients.h</string>
+                  <string>Dialog_JackClients.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Spreadsheet_Grid</Name>
+                <Subfolders />
+                <Files>
+                  <string>spreadsheet.cpp</string>
+                  <string>spreadsheetdelegate.cpp</string>
+                  <string>spreadsheetitem.cpp</string>
+                  <string>NQgridWidget.cpp</string>
+                  <string>NQgridWidgetItem.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Plot</Name>
+                <Subfolders />
+                <Files>
+                  <string>Osciloscope.cpp</string>
+                  <string>qcustomplot.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Web</Name>
+                <Subfolders />
+                <Files>
+                  <string>web_browswe_widget.cpp</string>
+                </Files>
+                <RelatedFilterName>Source Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Spreadsheet_Grid</Name>
+                <Subfolders />
+                <Files>
+                  <string>spreadsheetitem.h</string>
+                  <string>spreadsheetdelegate.h</string>
+                  <string>spreadsheet.h</string>
+                  <string>NQgridWidgetItem.h</string>
+                  <string>NQgridWidget.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Web</Name>
+                <Subfolders />
+                <Files>
+                  <string>web_browser_widget.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>Plot</Name>
+                <Subfolders />
+                <Files>
+                  <string>qcustomplot.h</string>
+                  <string>Osciloscope.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+              <VirtualSourceFolder>
+                <Name>MainMenu</Name>
+                <Subfolders />
+                <Files>
+                  <string>MainMenue.h</string>
+                </Files>
+                <RelatedFilterName>Header Files</RelatedFilterName>
+              </VirtualSourceFolder>
+            </Subfolders>
+            <Files />
+          </RootVirtualSourceFolder>
+          <HeaderDiscoveryMode>Default</HeaderDiscoveryMode>
+          <ResourceDirectories />
+        </CMakeTargetSpecificSettings>
+      </TargetSpecificSettings>
+      <DeploymentDirectory>/home/pi/AdjHeartModSynth_2</DeploymentDirectory>
+      <SetLDLibraryPathFromDependentArtifacts>true</SetLDLibraryPathFromDependentArtifacts>
+      <ProjectGUID>c5792fc1-bd51-46e5-b1bf-188fe9e019ee</ProjectGUID>
+      <VirtualFolders />
+      <ConfigurationNameCase>Upper</ConfigurationNameCase>
+      <DefaultHeaderDiscoveryMode>None</DefaultHeaderDiscoveryMode>
+      <EnableFastUpToDateCheck>true</EnableFastUpToDateCheck>
+    </ProjectModeSettings>
+  </Build>
+  <CustomBuild>
+    <PreSyncActions />
+    <PreBuildActions />
+    <PostBuildActions />
+    <PreCleanActions />
+    <PostCleanActions />
+  </CustomBuild>
+  <CustomDebug>
+    <PreDebugActions />
+    <PostDebugActions />
+    <DebugStopActions />
+    <BreakMode>Default</BreakMode>
+  </CustomDebug>
+  <CustomShortcuts>
+    <Shortcuts />
+    <ShowMessageAfterExecuting>true</ShowMessageAfterExecuting>
+  </CustomShortcuts>
+  <UserDefinedVariables />
+  <ImportedPropertySheets />
+  <CodeSense>
+    <Enabled>True</Enabled>
+    <ExtraSettings>
+      <HideErrorsInSystemHeaders>true</HideErrorsInSystemHeaders>
+      <SupportLightweightReferenceAnalysis>true</SupportLightweightReferenceAnalysis>
+      <DiscoverySettings>
+        <Mode>Enabled</Mode>
+        <SearchInProjectDir>true</SearchInProjectDir>
+        <SearchInSourceDirs>true</SearchInSourceDirs>
+        <SearchInIncludeSubdirs>true</SearchInIncludeSubdirs>
+        <ExtraSearchDirs>
+          <string>E:\Nahum\Workspace\RaspberryPi3\Projects\VS\AdjModSynth_2\AdjModSynth_2\VisualGDB\Debug\AdjModSynth_autogen\include</string>
+        </ExtraSearchDirs>
+      </DiscoverySettings>
+      <CheckForClangFormatFiles>true</CheckForClangFormatFiles>
+      <FormattingEngine>ClangFormat</FormattingEngine>
+    </ExtraSettings>
+    <CodeAnalyzerSettings>
+      <Enabled>false</Enabled>
+    </CodeAnalyzerSettings>
+  </CodeSense>
+  <Configurations />
+  <ProgramArgumentsSuggestions />
+  <Debug xsi:type="com.visualgdb.debug.remote">
+    <AdditionalStartupCommands />
+    <AdditionalGDBSettings>
+      <Features>
+        <DisableAutoDetection>false</DisableAutoDetection>
+        <UseFrameParameter>false</UseFrameParameter>
+        <SimpleValuesFlagSupported>false</SimpleValuesFlagSupported>
+        <ListLocalsSupported>false</ListLocalsSupported>
+        <ByteLevelMemoryCommandsAvailable>false</ByteLevelMemoryCommandsAvailable>
+        <ThreadInfoSupported>false</ThreadInfoSupported>
+        <PendingBreakpointsSupported>false</PendingBreakpointsSupported>
+        <SupportTargetCommand>false</SupportTargetCommand>
+        <ReliableBreakpointNotifications>false</ReliableBreakpointNotifications>
+      </Features>
+      <EnableSmartStepping>false</EnableSmartStepping>
+      <FilterSpuriousStoppedNotifications>false</FilterSpuriousStoppedNotifications>
+      <ForceSingleThreadedMode>false</ForceSingleThreadedMode>
+      <UseAppleExtensions>false</UseAppleExtensions>
+      <CanAcceptCommandsWhileRunning>false</CanAcceptCommandsWhileRunning>
+      <MakeLogFile>false</MakeLogFile>
+      <IgnoreModuleEventsWhileStepping>true</IgnoreModuleEventsWhileStepping>
+      <UseRelativePathsOnly>false</UseRelativePathsOnly>
+      <ExitAction>None</ExitAction>
+      <DisableDisassembly>false</DisableDisassembly>
+      <ExamineMemoryWithXCommand>false</ExamineMemoryWithXCommand>
+      <StepIntoNewInstanceEntry>main</StepIntoNewInstanceEntry>
+      <ExamineRegistersInRawFormat>true</ExamineRegistersInRawFormat>
+      <DisableSignals>false</DisableSignals>
+      <EnableAsyncExecutionMode>false</EnableAsyncExecutionMode>
+      <EnableNonStopMode>false</EnableNonStopMode>
+      <MaxBreakpointLimit>0</MaxBreakpointLimit>
+      <EnableVerboseMode>true</EnableVerboseMode>
+    </AdditionalGDBSettings>
+    <LaunchGDBSettings xsi:type="GDBLaunchParametersNewInstance">
+      <DebuggedProgram>$(TargetPath)</DebuggedProgram>
+      <GDBServerPort>2000</GDBServerPort>
+      <ProgramArguments>$(SelectedCMakeTargetArgs)</ProgramArguments>
+      <WorkingDirectory>$(SelectedCMakeTargetLaunchDir)</WorkingDirectory>
+      <ArgumentEscapingMode>Auto</ArgumentEscapingMode>
+    </LaunchGDBSettings>
+    <GenerateCtrlBreakInsteadOfCtrlC>false</GenerateCtrlBreakInsteadOfCtrlC>
+    <SuppressArgumentVariablesCheck>false</SuppressArgumentVariablesCheck>
+    <DeploymentTargetPath>/home/pi/AdjHeartModSynth_2/$(TargetFileName)</DeploymentTargetPath>
+    <CustomTerminalProgram>xterm</CustomTerminalProgram>
+    <X11WindowMode>Remote</X11WindowMode>
+    <KeepConsoleAfterExit>false</KeepConsoleAfterExit>
+    <RunGDBUnderSudo>false</RunGDBUnderSudo>
+    <DeploymentMode>Auto</DeploymentMode>
+    <DeployWhenLaunchedWithoutDebugging>true</DeployWhenLaunchedWithoutDebugging>
+    <StripDebugSymbolsDuringDeployment>false</StripDebugSymbolsDuringDeployment>
+    <SuppressTTYCreation>false</SuppressTTYCreation>
+    <IndexDebugSymbols>false</IndexDebugSymbols>
+  </Debug>
+</VisualGDBProjectSettings2>
