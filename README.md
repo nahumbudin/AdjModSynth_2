@@ -3,6 +3,10 @@ AdjHeart Modular Synthesizer for Raspberry Pi Qt C++ GUI
 
 www.adjheart.com
 
+This is the synthesizer GUI application implemented with Qt.
+
+Concept screenshots samples are provided in the screenshots folder (actual screenshots may be viewd on the AdjHeart website)
+
 ## General Description of the AdjSynth Synthesizer.
 
 Each of the AdjSynth synthesizer polyphonic voice implements the following:
