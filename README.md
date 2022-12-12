@@ -64,3 +64,25 @@ The AdjSynth Synthesizer provides the user with editing, management and configur
   - 3 Sketches for incremental patch creation.​ 
   - Saving and loading Patch-files.
   - Saving and loading settings file.
+
+
+## Sample Screenshots
+
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/maintabmarkeddark_orig.png)
+  
+  
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/osc1-screenshot-from-2020-08-06-01-10-54_orig.png)
+
+
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/pad-screenshot-from-2020-08-06-09-33-54_orig.png)
+
+
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/mso-screenshot-from-2020-08-06-09-12-16_orig.png)
+
+
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/modulators-screenshot-from-2020-08-06-09-36-32_orig.png)
+
+
+![ALT](https://www.adjheart.com/uploads/3/4/3/9/3439775/kps-screenshot-from-2020-08-06-09-48-24_orig.png)
+  
+ 
